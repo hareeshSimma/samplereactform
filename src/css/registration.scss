@@ -1,0 +1,129 @@
+section {
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    left: 50%;
+    transform: translate(-50%);
+    .heading {
+      h1,p {
+        text-align: center; 
+      }
+    }
+    form {
+      text-align: center;
+      .form-fields {
+        padding: 1%;
+        input {
+          width: 60%;
+          height: 25px;
+          border: 1px solid black;
+          border-radius: 2px;
+          text-indent: 35px;
+        }
+        .icon {
+          position: relative;
+          left: 5%;
+        }
+        .error-icon {
+          right: 20%;
+          position: absolute;
+          margin-top: 1%;
+        }
+      }
+      .errors {
+        color: red;
+        input {
+          border: 1px solid red;
+        }
+      }
+      .condition {
+        text-align: center;
+      }
+      .errors-list {
+        padding-bottom: 5px;
+        .error {
+          width: 60%;
+          min-height: 20px;
+          background: red;
+          color: white;
+          text-align: left;
+          display: inline-block;
+          margin-left: 5%;
+        }
+      }
+      .register-button {
+        .submit {
+          width: 60%;
+          height: 35px;
+          background: orange;
+          border: none;
+          margin-left: 5%;
+          font-weight: 700;
+          border-radius: 2px;
+          cursor: pointer;
+        }
+      }
+      .navigate-to-sigin {
+        p {
+          a {
+            text-decoration: none;
+            color: black;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+  
+  
+  
+  @media screen and (max-width: 767px) {
+    section {
+      form {
+        .form-fields {
+          .icon { 
+            left: 25px;
+          }
+          .error-icon { 
+            right: 13%;
+          }
+        }
+      } 
+    } 
+    section {
+      form {
+        .form-fields {
+          input {
+            width:75%; 
+            text-indent: 30px; }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 1023px) and (min-width: 768px) {
+    section {
+      form {
+        .form-fields {
+          .icon { 
+            left: 25px;
+          }
+          .error-icon { 
+            right: 155px;
+          }
+        }
+      } 
+    } 
+    section {
+      form {
+        .form-fields {
+          input {
+            width:60%; 
+            text-indent: 30px; 
+          }
+          .error-icon {
+            margin-top: 0.5%;
+          }
+        }
+      }
+    }
+  }
