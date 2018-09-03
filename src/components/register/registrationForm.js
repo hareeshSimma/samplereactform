@@ -80,6 +80,7 @@ class RegisterationForm extends Component {
   validateCheck = (name) => {
     const validJsErrors = validate(this.state, this.constraints);
     const errorKeys = validJsErrors ? Object.keys(validJsErrors): {};
+    console.log(validJsErrors)
     if(validJsErrors){
       Object.entries(validJsErrors)
         .forEach((key, value) => {
@@ -110,8 +111,8 @@ class RegisterationForm extends Component {
       <React.Fragment>
         <section>
           <div className="heading">
-            <h1>Register</h1>
-            <p>Join the community and improve your game <br />with <b>ANGLR</b></p>
+            <h1>Registeration Form</h1>
+           
           </div>
           <form>
             <div className={"form-fields" + " " +(formErrors && this.state.errors.firstName ? "errors":"")}>
@@ -163,9 +164,9 @@ class RegisterationForm extends Component {
                 {formErrors && this.state.errors.confirmpassword?<FontAwesome.FaExclamationTriangle/>:""}
               </span>                         
             </div>
-            <div className="condition">
+            {/* <div className="condition">
               <p>By registering you agree to<br/> our <b>Terms</b> and <b>Privacy Police</b></p>
-            </div>
+            </div> */}
             <div className="errors-list">
               {Object.keys(this.state.errors).map((key,value)=>{
                 if(formErrors && this.state.errors[key].length) {
